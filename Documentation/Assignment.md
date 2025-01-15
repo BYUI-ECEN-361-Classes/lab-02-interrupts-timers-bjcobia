@@ -1,6 +1,6 @@
 # ECEN-361 Lab-02: Clocks, Timers, and Interrupts
 ### Winter-2025
-     Student Name:  Fill-in HERE
+     Student Name:  Bradley Cobia
 
 
 ## Introduction and Objective of the Lab
@@ -75,9 +75,9 @@ Note the speed of D1/D2/D3 - they should seem like a 3-bit binary counter.
 
 Once you have all three LEDs blinking properly, answer the following questions:
 
-1. At what frequency does D1 toggle? [*answer here*]
+1. At what frequency does D1 toggle? It depends if you means when it toggles if it is every time the light turns on or every time that it turns on or off. If we go off of everytime it turns on and off it would be 1Hz because it is once every second. If we want every time the light turns on it is 0.5Hz because it is turning on every 2 seconds.
 
-2. Do all LEDs toggle at *exactly* the same time? [*answer here*]
+2. Do all LEDs toggle at *exactly* the same time? No, even if they did go off at the same time the computer would do each turn on separately so it could look very close to the same but it really isn't.
 
 ## Part 2: Changing the clock tree
 
@@ -92,18 +92,18 @@ Change the clock tree to adjust the rates at which the LEDs blink.
 
 ## Part 2 Questions (3 pts)
 
-1. What has happened to the speed of the timers? [*answer here*]
+1. What has happened to the speed of the timers? They have been halved
 
-2. What is the new frequency of LED D1? [*answer here*]
+2. What is the new frequency of LED D1? It would be half what it was before so 0.25Hz
 
-3. When we changed the frequency, did the Seven-Segment Light update rate change?  (hint, look at the clocks driving the APB1, APB2 buses and which timers are on which bus.  Recall that the Seven-Segment timer is Tim17) [*answer here*]
+3. When we changed the frequency, did the Seven-Segment Light update rate change?  (hint, look at the clocks driving the APB1, APB2 buses and which timers are on which bus.  Recall that the Seven-Segment timer is Tim17) Yes, it did update the rate change. I found that TIM17 is being driven by APB2 Peripherals and in the GUI you can see when you change the prescalar it changes the rate change from 80 to 10.
 
 ## Part 3: Reaction Timer (5 pts)
 
 In addition to performing useful tasks at set intervals, timers can also be used to measure elapsed time of an event. The events can be triggered by software, or by a hardware input.
 
 For this part of the lab, we'll make a small “reaction timer” that measures how fast your hand/eye coordination can be, in milliseconds.
-
+   
 We'll define the buttons and display as shown:
 
 ![](media/2b43c113169efb48ce00225bd55358ff.png)
