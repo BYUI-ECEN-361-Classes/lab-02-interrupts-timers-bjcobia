@@ -127,7 +127,7 @@ int main(void)
   // Start timer
   HAL_TIM_Base_Start_IT(&htim17);  // LED SevenSeg cycle thru them   DONT CHANGE
   HAL_TIM_Base_Start_IT(&htim16);  // LED-D1 toggle according to Timer16   DONT CHANGE
-  HAL_TIM_Base_Start_IT(&htim6);
+  HAL_TIM_Base_Start_IT(&htim6);   // Added timers
   HAL_TIM_Base_Start_IT(&htim7);
 
 

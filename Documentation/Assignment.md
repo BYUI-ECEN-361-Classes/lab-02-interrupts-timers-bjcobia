@@ -139,4 +139,4 @@ For Seven Segment Display Functions, check the MultiFunctionShield.h header file
 
 * Currently, the reaction tester can have a wait time anywhere between 0 and 7000 milliseconds, Implement a minimum wait time in such a way that doesn't change the potential maximum wait time
 
-If you do any of these items - just mention what and how it worked, [*here*].
+If you do any of these items - just mention what and how it worked, I did the cheating penalty and implemented a way for the reaction timer to realize if you had pushed the button before the timer went off. If the reaction timer equals 0 then the 7seg display blinks and shows "EEEE" and it doesn't save the 0 as a valid time. You would have to try again because it is impossible to get 0 as your reaction time.
